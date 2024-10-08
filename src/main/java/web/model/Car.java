@@ -1,16 +1,14 @@
 package web.model;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Car {
 
     private int id;
     private String model;
     private String series;
+    private static int count;
 
-    public Car(int id, String model, String series) {
-        this.id = id;
+    public Car(String model, String series) {
+        this.id = ++count;
         this.model = model;
         this.series = series;
     }
